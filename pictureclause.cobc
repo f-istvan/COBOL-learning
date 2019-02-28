@@ -1,0 +1,34 @@
+IDENTIFICATION DIVISION.
+PROGRAM-ID. PICTURE-CLAUSE-SYMBOLS.
+AUTHOR. F-ISTVAN.
+
+DATA DIVISION.
+WORKING-STORAGE SECTION.
+    01 WS-NAME PIC A(15).
+    01 WS-ID PIC X(5) VALUE '12345'.
+
+PROCEDURE DIVISION.
+   A000-FIRST-PARA.
+   DISPLAY 'Hello World'.
+   MOVE 'fistvan' TO WS-NAME.
+   DISPLAY "My name is : " WS-NAME.
+   DISPLAY "My ID is : " WS-ID.
+
+STOP RUN.
+
+*> Symbols used in a Picture clause:
+
+*> 9 - Numeric
+*> A - Alphabetic
+*> X - Alphanumeric
+*> V - Implicit Decimal
+*> S - Sign
+*> P - Assumed Decimal
+
+*> in
+*> 01 WS-NUM3 PIC S9(3)V9(2) VALUE -123.45.
+*> S9(3)V9(2)
+*> means
+
+*> Sign + Numeric(3 length) + Implicit Decimal + Numeric(2 length)
+*> -      123                 .                  45
