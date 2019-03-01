@@ -12,6 +12,8 @@ tar xf gnucobol-3.0-rc1.tar.xz
 cd gnucobol-3.0-rc1/
 ./configure
 make
+cd ..
+rm -fr gnucobol-3.0-rc1/ gnucobol-3.0-rc1.tar.xz
 ```
 
 #### Build and Run
